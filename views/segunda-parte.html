@@ -7,27 +7,48 @@
 </head>
 <body>
     <div id="botao">
-        <!-- exercício1 { -->
-         <!-- <button class="btn">
+        <!-- exercício1 {  -->
+         <button class="btn">
             Crie um novo Quadrado 
-            </button> -->
-         <!-- } -->
+            </button> 
+          <!-- } -->
   
     </div>
 
 
     <script>
         // exercício1 {
-        // var btn = document.querySelector('.btn');
+        var btn = document.querySelector('.btn');
 
-        // btn.onclick = function(){
-        //     var boxElement = document.createElement('div');
+        var boxElement = document.createElement('div');
+        btn.onclick = function(){          
               
-        //       boxElement.setAttribute('style', 'width: 100px;height: 100px;background-color: #f00');
+              boxElement.setAttribute('style', 'width: 100px;height: 100px;background-color: #f00');
               
-        //       var containerElement = document.querySelector('#botao')
-        //       containerElement.appendChild(boxElement)
-        // }
+              var containerElement = document.querySelector('#botao')
+              containerElement.appendChild(boxElement)
+        };
+
+        function   getRandomColor()   {
+            var   letters   =   "0123456789ABCDEF"; 
+            var   color   =   "#";
+            for   (var   i   =   0;   i   <   6;   i++)   { 
+                color   +=   letters[Math.floor(Math.random()   *   16)]; 
+            } 
+            return   color;
+        }; 
+
+        var   newColor   =   getRandomColor();  
+        var color = newColor.toString();
+
+        
+        boxElement.onmouseover = function() {
+
+            boxElement.setAttribute('style', 'width: 100px;height: 100px;background: ' + color);
+            
+            var containerElement = document.querySelector('botao');
+            containerElement.appendChild(boxElement);
+        };
         // }
     </script>
 </body>
