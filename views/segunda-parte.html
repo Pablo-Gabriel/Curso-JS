@@ -7,49 +7,69 @@
 </head>
 <body>
     <div id="botao">
-        <!-- exercício1 {  -->
-         <button class="btn">
+        <!-- exercício1 E 2{  -->
+         <!-- <button class="btn">
             Crie um novo Quadrado 
-            </button> 
+            </button>  -->
           <!-- } -->
-  
+        <ul>
+            <li>Diego</li>
+            <li>Gabriel</li>
+            <li>Lucas</li>
+
+        </ul>
     </div>
 
 
     <script>
-        // exercício1 {
-        var btn = document.querySelector('.btn');
+        // exercício1 E 2 {
+        // var btn = document.querySelector('.btn');
 
-        var boxElement = document.createElement('div');
-        btn.onclick = function(){          
-              
-              boxElement.setAttribute('style', 'width: 100px;height: 100px;background-color: #f00');
-              
-              var containerElement = document.querySelector('#botao')
-              containerElement.appendChild(boxElement)
-        };
+        // function   getRandomColor()   {
+        //     var   letters   =   "0123456789ABCDEF"; 
+        //     var   color   =   "#";
+        //     for   (var   i   =   0;   i   <   6;   i++)   { 
+        //         color   +=   letters[Math.floor(Math.random()   *   16)]; 
+        //     } 
+        //     return   color;
+        // }; 
 
-        function   getRandomColor()   {
-            var   letters   =   "0123456789ABCDEF"; 
-            var   color   =   "#";
-            for   (var   i   =   0;   i   <   6;   i++)   { 
-                color   +=   letters[Math.floor(Math.random()   *   16)]; 
-            } 
-            return   color;
-        }; 
-
-        var   newColor   =   getRandomColor();  
-        var color = newColor.toString();
-
+        // var   newColor   =   getRandomColor();  
+        // var color = newColor.toString();
         
-        boxElement.onmouseover = function() {
+        // btn.onclick = function(){          
+        //     var boxElement = document.createElement('div');
 
-            boxElement.setAttribute('style', 'width: 100px;height: 100px;background: ' + color);
+        //       boxElement.setAttribute('style', 'width: 100px;height: 100px;background-color: #f00');
+              
+        //       var containerElement = document.querySelector('#botao');
+        //       containerElement.appendChild(boxElement);
+
             
-            var containerElement = document.querySelector('botao');
-            containerElement.appendChild(boxElement);
-        };
+        //         boxElement.onmouseover = function() {
+
+        //         boxElement.setAttribute('style', 'width: 100px;height: 100px;background: ' + color);
+
+        //         var containerElement = document.querySelector('botao');
+        //         containerElement.appendChild(boxElement);
+        //         };
+        // };
+        
         // }
+
+        // exercício 3 {
+            var nomes = ["Diego", "Gabriel", "Lucas"];
+
+            var ulElement = document.createElement('ul');
+            var ulText = document.createTextNode('<li>'+ nomes[0] + '</li>','<li>'+ nomes[1] + '</li>', '<li>'+ nomes[2] + '</li>');
+            ulElement.appendChild(ulText);
+            console.log(ulElement);
+
+
+        // } 
+
+
+
     </script>
 </body>
 </html>
