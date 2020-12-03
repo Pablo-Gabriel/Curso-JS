@@ -12,12 +12,7 @@
             Crie um novo Quadrado 
             </button>  -->
           <!-- } -->
-        <ul>
-            <li>Diego</li>
-            <li>Gabriel</li>
-            <li>Lucas</li>
-
-        </ul>
+          <ul></ul>
     </div>
 
 
@@ -58,12 +53,24 @@
         // }
 
         // exercício 3 {
-            var nomes = ["Diego", "Gabriel", "Lucas"];
+            var ulElement = document.querySelector('.botao ul');
+            var nomes = ["Diego", 
+                         "Gabriel",
+                         "Lucas"];
+            
 
-            var ulElement = document.createElement('ul');
-            var ulText = document.createTextNode('<li>'+ nomes[0] + '</li>','<li>'+ nomes[1] + '</li>', '<li>'+ nomes[2] + '</li>');
-            ulElement.appendChild(ulText);
-            console.log(ulElement);
+            for (var i = 0; i < nomes.length; i++) {
+                var input = nomes[i];
+
+                if (nomes[i]) {
+                    var results = input;
+                    var listItem = document.createElement('li');
+                    listItem.textContent = results;
+                    ulElement.appendChild(listItem);
+                };
+            };
+
+            
 
 
         // } 
