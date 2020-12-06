@@ -57,17 +57,15 @@
             var nomes = ["Diego", 
                          "Gabriel",
                          "Lucas"];
+ 
             
 
             for (var i = 0; i < nomes.length; i++) {
                 var input = nomes[i];
-
-                if (nomes[i]) {
-                    var results = input;
-                    var listItem = document.createElement('li');
-                    listItem.textContent = results;
-                    ulElement.appendChild(listItem);
-                };
+                var results = input;
+                var listItem = document.createElement('li');
+                listItem.textContent = results;
+                ulElement.appendChild(listItem);
             };
 
             
